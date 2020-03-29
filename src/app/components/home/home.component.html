@@ -1,0 +1,66 @@
+<ion-card>
+    <ion-card-header>
+        <ion-card-title>Creador de Portadas</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+        <ion-item>
+            <ion-label position="floating">Título portada</ion-label>
+            <ion-input autocapitalize="'on'" clearInput="true" inputmode="text"
+                placeholder="Escriba el título de la portada" required="true" spellcheck="true"
+                (ionChange)="setTitle()"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+            <ion-label position="floating">Subtítulo portada</ion-label>
+            <ion-input autocapitalize="'on'" clearInput="true" inputmode="text"
+                placeholder="Escriba el subtítulo de la portada" required="true" spellcheck="true"
+                (ionChange)="setSubtitle()"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item style="position: relative;">
+            <ion-label position="stacked" style="margin-bottom: 10px;">Seleccione imagen</ion-label>
+            <div uk-form-custom style="left: 50%; transform: translateX(-50%);">
+                <input #file type="file" accept="image/*" (change)="previewImg(file.files)">
+                <button id="button-upload" class="uk-button uk-button-default" type="button" tabindex="-1">Cargue su
+                    imagen aquí</button>
+            </div>
+        </ion-item>
+        <div id="imgPreview" class="uk-text-center margin-fix">
+            <p *ngIf="!imgURL">No hay ninguna imagen cargada</p>
+
+            <!--*************************************************-->
+            <div *ngIf="imgURL" class="my-slider uk-position-relative uk-visible-toggle uk-light" tabindex="-1"
+                uk-slideshow="animation: pull; max-height: 350; autoplay: true; autoplay-interval: 6500">
+
+                <div style="background-color: whitesmoke; padding: 5px;">
+                    <ul class="uk-slideshow-items" style="cursor: move;">
+                        <li style="border-radius: 1rem;">
+                            <div
+                                class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-center">
+                                <img [src]="imgURL" alt="Img cargada" uk-cover>
+                                <div class="my-bg-img"></div>
+                            </div>
+                            <div class="uk-position-center uk-position-small uk-text-center">
+                                <h2 class="my-title-slide" uk-slideshow-parallax="x: 100, -100">
+                                    &nbsp;&nbsp;{{ tituloPortada }}&nbsp;&nbsp;
+                                </h2>
+                                <p class="my-subtitle-slide" uk-slideshow-parallax="x: 200, -200">{{ subtituloPortada }}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--*************************************************-->
+
+        </div>
+
+        <ion-button shape="round" color="success" expand="full" (click)="uploadFile()">
+            <ion-label>Subir Información</ion-label>
+        </ion-button>
+        <ion-button shape="round" color="danger" expand="full" (click)="clearAll()">
+            <ion-label>Limpiar Datos</ion-label>
+        </ion-button>
+    </ion-card-content>
+</ion-card>

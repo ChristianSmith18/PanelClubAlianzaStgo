@@ -1,19 +1,18 @@
-<ion-tabs>
+<ion-tabs (ionTabsDidChange)="changeSelectedTab()">
 
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="tab1">
-      <ion-icon name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+      <ion-img *ngIf="tab1" src="../../assets/icons-tabs/browser-selected.svg" alt="Tab icon" width="25"></ion-img>
+      <ion-img *ngIf="!tab1" class="non-selected" src="../../assets/icons-tabs/browser-non-selected.svg" alt="Tab icon"
+        width="25"></ion-img>
+      <ion-label>Páginas</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="tab2">
-      <ion-icon name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
-    </ion-tab-button>
-
-    <ion-tab-button tab="tab3">
-      <ion-icon name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+      <ion-img *ngIf="tab2" src="../../assets/icons-tabs/settings-selected.png" alt="Tab icon" width="25"></ion-img>
+      <ion-img *ngIf="!tab2" class="non-selected" src="../../assets/icons-tabs/settings-non-selected.svg" alt="Tab icon"
+        width="25"></ion-img>
+      <ion-label>Configuraciones</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 

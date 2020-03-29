@@ -1,3 +1,20 @@
+<ion-menu menuId="pages" contentId="main">
+  <ion-header>
+    <ion-toolbar id="toolbar-page">
+      <ion-title>Listado de Páginas:</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let page of pagesList" button="true" detail="true" (click)="changeViewComponent(page.id)">
+        {{ page.text }}
+      </ion-item>
+    </ion-list>
+
+    <ion-img id="logo" src="../assets/logo/logo-alianza-stgo.jpg" alt="Logo CLub Alianza Santiago"></ion-img>
+  </ion-content>
+</ion-menu>
+
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

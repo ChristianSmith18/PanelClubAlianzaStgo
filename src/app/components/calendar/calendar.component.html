@@ -1,0 +1,49 @@
+<ul uk-accordion="transition: ease-in-out">
+  <li class="uk-open">
+    <a class="uk-accordion-title" href="#">Crear Evento ({{ mes }})</a>
+    <div class="uk-accordion-content">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Creador de Eventos</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+
+          <ion-item>
+            <ion-label position="floating">Título del Evento</ion-label>
+            <ion-input autocapitalize="'on'" clearInput="true" inputmode="text"
+              placeholder="Escriba el título de la portada" required="true" spellcheck="true" (ionChange)="setTitle()">
+            </ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Descripción del Evento</ion-label>
+            <ion-input autocapitalize="'on'" clearInput="true" inputmode="text"
+              placeholder="Escriba el subtítulo de la portada" required="true" spellcheck="true"
+              (ionChange)="setDescription()"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-label position="floating">Fecha del Evento</ion-label>
+            <ion-datetime cancelText="Cancelar" doneText="Listo" displayFormat="DD MM YYYY" min="1997" max="2028" placeholder="Seleccione fecha del Evento" color="secondary">
+            </ion-datetime>
+          </ion-item>
+
+          <ion-button shape="round" color="success" expand="full">
+            <ion-label>Agregar Evento</ion-label>
+          </ion-button>
+          <ion-button shape="round" color="danger" expand="full">
+            <ion-label>Limpiar Datos</ion-label>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </li>
+  <li>
+    <a class="uk-accordion-title" href="#">Lista de Eventos ({{ mes }})</a>
+    <div class="uk-accordion-content">
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor reprehenderit.</p>
+    </div>
+  </li>
+</ul>

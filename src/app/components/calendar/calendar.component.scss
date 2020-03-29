@@ -1,0 +1,41 @@
+ul:first-child {
+    margin-top: 10px;
+}
+
+ul {
+    margin: auto 8px;
+}
+
+.uk-accordion-title:focus,
+.uk-open>a {
+    color: #3dc2ff;
+}
+
+ion-card {
+    border-top-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+ion-card-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+ion-item {
+    --highlight-color-focused: #3dc2ff;
+
+    ion-label {
+        --color: #3dc2ff;
+        font-size: 1.2rem;
+    }
+}
+
+ion-button {
+    ion-label {
+        color: #ffffff !important;
+    }
+}
+
+ion-button:last-child {
+    margin-top: 10px;
+}

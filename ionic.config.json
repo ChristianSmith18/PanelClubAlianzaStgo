@@ -1,5 +1,7 @@
 {
   "name": "PanelClubAlianza",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

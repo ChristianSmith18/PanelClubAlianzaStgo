@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "clubalianzastgo": {
+      "hosting": {
+        "app": [
+          "clubalianzastgo"
+        ]
+      }
+    }
+  }
+}

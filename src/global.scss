@@ -24,3 +24,34 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-title.title-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ion-tab-button {
+    ion-label {
+        margin-top: 5px;
+        color: #3dc2ff;
+        font-weight: bold;
+    }
+}
+
+ion-tab-bar {
+
+    ion-img,
+    img {
+        width: 30px;
+    }
+}
+
+.cancel-text {
+    color: #3dc2ff !important;
+}
+
+.send-text {
+    color: #2fdf75 !important;
+}
